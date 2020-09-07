@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="build/tailwind.css">
+</head>
+
+<body class="w-full min-h-screen m-0 bg-gradient-to-r from-green-400 to-blue-500 bg-hero">
+    
+    <!-- heading -->
+    <div class="text-center fixed inset-auto bg-hero w-full z-10 pb-2 sm:pb-4">
+        <span
+            class="tracking-widest font-bold text-2xl ssm:text-3xl sm:text-4xl font-kaushan text-shadow-purple text-purple-900">
+            Infinite Scroll
+            <i class="fas fa-infinity"></i>
+        </span>
+        <span class="text-2xl ssm:text-3xl sm:text-4xl font-kaushan text-black font-extrabold text-shadow-grey">
+            Image Gallery
+        </span>
+    </div>
+
+    <!-- Double Ring Loader -->
+    <div id="double_ring_loader" class="w-full min-h-screen absolute flex items-center justify-center bg-gray-400 bg-opacity-25 z-50">
+        <img src="double_ring_loader.svg" alt="Loading">
+    </div>
+
+    <!-- Partial Masonry Layout -->
+    <div id="image-grid" class="grid grid-cols-1 gap-2 mx-10 ssm:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 z-20">
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
