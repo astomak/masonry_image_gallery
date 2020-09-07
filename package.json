@@ -1,0 +1,17 @@
+{
+  "name": "image_gallery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "postcss public/style.css -o public/build/tailwind.css --watch",
+    "build": "postcss public/style.css -o public/build/tailwind.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "postcss-cli": "^7.1.2",
+    "tailwindcss": "^1.7.6"
+  }
+}
