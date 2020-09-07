@@ -1,5 +1,6 @@
 const image_grid = document.querySelector("#image-grid");
 const double_loader = document.querySelector("#double_ring_loader");
+const infinity_loader = document.querySelector("#infinity-loader");
 const API_KEY = 'qIV_rSZU8bI2jrRGKgSG67paYq_AVQUaDp2fMXFA4uw';
 const apiURL = `https://api.unsplash.com/photos/random?client_id=${API_KEY}&count=`;
 
@@ -15,6 +16,7 @@ function imgLoded() {
     if (imageLoadedCount === totalImages) {
         ready = true;
         double_loader.classList.add("hidden");
+        infinity_loader.classList.add("hidden");
     }
 }
 
@@ -62,6 +64,7 @@ const getPhotosFromAPI = async (count=20) => {
 window.addEventListener("scroll", () => {
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 1000 && ready){
         ready = false;
+        infinity_loader.classList.remove("hidden");
         getPhotosFromAPI(30);
     }
 });
